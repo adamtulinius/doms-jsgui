@@ -1,0 +1,17 @@
+<div class="object">
+    <div class="title">{{currentObject.title}}</div>
+    <div class="id">{{currentObject.pid}}</div>
+    <div class="state">{{currentObject.state}}</div>
+
+    <h3>Datastreams</h3>
+    <div class="datastreams">
+        <div class="datastream" ng-repeat="(id, content) in datastreams">
+            <div class="id">
+                {{ id }}
+            </div>
+            <div class="content">
+                {{ content }}
+            </div>
+        </div>
+    </div>
+</div>

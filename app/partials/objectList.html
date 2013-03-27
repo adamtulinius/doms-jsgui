@@ -1,0 +1,22 @@
+Query: <input ng-model="query" ng-change="updateResults()"/>
+Limit: <input ng-model="limit" ng-change="updateResults()"/>
+Offset: <input ng-model="offset" ng-change="updateResults()"/>
+
+<table>
+    <tr>
+        <th>Type</th>
+        <th>Source</th>
+        <th>Title</th>
+        <th>Time/period</th>
+        <th>Description</th>
+        <th>State</th>
+    </tr>
+    <tr ng-repeat="object in searchResults.search_results">
+        <td>{{ object.type }}</td>
+        <td>{{ object.source }}</td>
+        <td><a href="#/objects/{{ object.pid }}">{{ object.title }}</a></td>
+        <td>{{ object.time }}</td>
+        <td>{{ object.description }}</td>
+        <td>{{ object.state }}</td>
+    </tr>
+</table>
