@@ -1,7 +1,11 @@
 <div class="object">
-    <div class="title">{{currentObject.title}}</div>
-    <div class="id">{{currentObject.pid}}</div>
-    <div class="state">{{currentObject.state}}</div>
+    <div class="title">{{ currentObject.title }}</div>
+    <div class="id">{{ currentObject.pid }}</div>
+    <div class="state">{{ currentObject.state }}
+        <input ng-model="currentObject.state" value="A" type="radio" id="active"/><label for="active">active</label>
+        <input ng-model="currentObject.state" value="I" type="radio" id="inactive"/><label for="inactive">inactive</label>
+        <input ng-model="currentObject.state" value="D" type="radio" id="deleted"/><label for="deleted">deleted</label>
+    </div>
 
     <h3>Datastreams</h3>
     <div class="datastreams">
