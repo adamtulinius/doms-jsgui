@@ -10,15 +10,15 @@ angular.module('domsgui.services', []).
 
 angular.module('domsgui.objectService', ['ngResource']).
     factory('DomsObject', function($resource) {
-        return $resource('http://localhost\\:4567/objects/:objectId', {}, {});
+        return $resource('/objects/:objectId', {}, {});
     });
 
 angular.module('domsgui.datastreamService', ['ngResource']).
     factory('Datastream', function($resource) {
-        return $resource('http://localhost\\:4567/objects/:objectId/:datastream', {}, {});
+        return $resource('/objects/:objectId/:datastream', {}, {});
     });
 
 angular.module('domsgui.searchService', ['ngResource']).
     factory('SearchResult', function($resource) {
-        return $resource('http://localhost\\:4567/search?q=:query&offset=:offset&limit=:limit', {}, {});
+        return $resource('/search?q=:query&offset=:offset&limit=:limit', {}, {});
     });

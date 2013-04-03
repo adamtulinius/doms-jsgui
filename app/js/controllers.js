@@ -11,7 +11,7 @@ function ObjectController($scope, $routeParams, DomsObject, $http) {
     });
 
     $scope.loadDatastream = function(datastreamId) {
-        $http.get('http://localhost:4567/objects/' + $scope.objectId + '/' + datastreamId).success(
+        $http.get('/objects/' + $scope.objectId + '/' + datastreamId).success(
             function(data, status, headers, config) {
                 $scope.datastreams[datastreamId] = data;
             }
